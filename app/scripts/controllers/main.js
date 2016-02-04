@@ -149,7 +149,7 @@ angular.module('clothingWebsiteApp')
       var retrieved = JSON.parse(sessionStorage.getItem('basket'));
       if (retrieved !== null) {
         self.basket = retrieved;
-        self.basket = self.basket.filter(function(n){ return n !== undefined });
+        self.basket = self.basket.filter(function(n){ return n != undefined });
       }
     };
 
