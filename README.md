@@ -31,7 +31,6 @@ After cloning the repo, go into the root folder of the project and:
 
 Run `npm install`<br>
 Run `grunt`
-
 Run `grunt serve` to view the application
 
 ## Testing
