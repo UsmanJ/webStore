@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body ng-app="clothingWebsiteApp" ng-controller="MainCtrl as main">
+    <div class="header">
+      <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+
+            <a class="navbar-brand" href="#/">Fashion 247</a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="js-navbar-collapse">
+
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#/">Home</a></li>
+              <li><a ng-href="#/about">About</a></li>
+              <li><a ng-href="#/">Contact</a></li>
+            </ul>
+            <div class="btn-group" id="basketButton">
+              <button type="button" id="basketDropdown" class="btn btn-default dropdown-toggle" data-toggle="collapse" data-target="#basket" aria-haspopup="true" aria-expanded="false">
+                Basket £{{main.totalCost.toFixed(2)}}<span class="caret"></span>
+              </button>
+              <div class="dropdown-menu" id="basket">
+                <div id="basketContent">
+                  <p class="productCount">{{main.totalProducts}} item(s)</p>
+                  <br>
+                  <div class="basket" ng-repeat="product in main.basket track by $index" ng-hide="delete()">
+                    <p class="productName"> {{product.product}}</p>
+                    <p class="productPrice"> £{{(product.price * product.quantity).toFixed(2)}}</p>
+                    <p class="quantity">Quantity: {{product.quantity}}</p>
+                    <div class="quantitydiv">
+                      <div class="increment" style="cursor: pointer;" ng-click="main.incrementItem(product)">
+                        <p class="increment-quantity">+</p>
+                      </div>
+                      <div class="decrement" style="cursor: pointer;" ng-click="main.decrementItem(product)">
+                        <p class="decrement-quantity">-</p>
+                      </div>
+                    </div>
+                  </div>
+                  <form ng-submit="main.submitVoucher(text)" ng-show="!main.discountApplied">
+                    Discount Voucher:
+                    <input type="text" ng-model="text" name="text" />
+                    <input type="submit" id="submit" value="Submit" />
+                  </form>
+                  <div class="alert alert-warning" role="alert" ng-show="main.incorrectCode" ng-hide="!main.incorrectCode">Incorrect code. Please check and try again.</div>
+                  <div class="alert alert-warning" role="alert" ng-show="main.incompatiableVoucher" ng-hide="!main.incompatiableVoucher">You can not use this voucher with this order.</div>
+                  <div class="alert alert-warning" role="alert" ng-show="main.discountAlreadyApplied">You can only apply one code per order.</div>
+                  <div class="discountdiv" ng-show="main.discountApplied">
+                    <p class="discount">Discount:  -£{{main.discount.toFixed(2)}}</p>
+                  </div>
+                  <div class="basket-price">
+                    <p class="total-price">Total: £{{main.totalCost.toFixed(2)}}</p>
+                  </div>
+                  <a href="#" id="orderBtn" type="button" class="btn btn-success" ng-click="main.clearBasket()">Confirm Your Order</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+    <div ng-view></div>
+    </div>
+
+    <div class="footer">
+
+    </div>
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/factories/catalogueservice.js"></script>
+    <script src="scripts/factories/discountservice.js"></script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+[
+	{
+		"code":"fiver",
+		"discount": 5,
+		"value": 5
+	},
+	{
+		"code":"tenner",
+		"discount": 10,
+		"value": 50
+	},
+	{
+		"code":"fifteen",
+		"discount": 15,
+		"value": 5
+	}
+]

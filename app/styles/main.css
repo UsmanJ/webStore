@@ -1,0 +1,180 @@
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding: 0;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+#basketButton{
+  float: right;
+  margin-top: 8px;
+}
+
+#basketDropdown {
+  width: 150px;
+  font-weight: 600;
+}
+
+#basketDropdown:hover {
+  text-decoration: underline;
+}
+
+#basket {
+  width: 250px;
+}
+
+.quantitydiv {
+  margin-top: -30px;
+  margin-left: 90px;
+}
+
+.increment {
+  max-width: 12px;
+}
+
+.decrement {
+  margin-top: -30px;
+  margin-left: 25px;
+  max-width: 12px;
+}
+
+.alert {
+  margin-right: 5px;
+  margin-top: 10px;
+}
+
+#orderBtn {
+  float: right;
+  margin-right: 5px;
+}
+
+.total-price {
+  font-weight: bold;
+}
+
+.row {
+  margin-right: -30px;
+  margin-left: 0px;
+}
+
+.discount {
+  font-style: italic;
+  font-weight: 500;
+}
+.productCount {
+  font-weight: 600;
+}
+
+.productName {
+  font-weight: 600;
+}
+
+.basket {
+  margin-bottom: 25px;
+}
+
+#basketContent {
+  margin-left: 5px;
+}
+
+.productarticle {
+  margin-bottom: 20px;
+}
+
+.thumbnail {
+  width: 300px;
+  height: 350px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .header {
+    margin-bottom: 30px;
+  }
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+
+@media screen and (max-width: 982px) {
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .header {
+    margin-bottom: 30px;
+  }
+  .jumbotron {
+    border-bottom: 0;
+  }
+
+  .row {
+    margin-left: auto;
+  }
+}

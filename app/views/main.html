@@ -1,0 +1,29 @@
+<div class="jumbotron">
+  <h1>Welcome!</h1>
+  <h3> Take a look at our new products below!</h3>
+</div>
+
+<div class="row">
+  <div class="col-md-6" ng-repeat="product in main.catalogue.products | orderBy: 'category'">
+    <article class="productarticle">
+      <div class="details">
+        <div class="">
+          <div class="">
+            <img class="thumbnail" ng-src="{{product.url}}">
+          </div>
+        </div>
+        <h4 class="name">{{product.name}}</h4>
+        <div class="categorydiv">
+          <p class="category">{{product.category}}</p>
+        </div>
+        <div class="pricediv">
+          <p class="price">£{{product.price}}</p>
+        </div>
+        <div class="quantitydiv">
+          <p class="quantity">{{product.quantity}} Available</p>
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary"ng-click="main.add(product)">Add To Your Basket!</button>
+    </article>
+  </div>
+</div>

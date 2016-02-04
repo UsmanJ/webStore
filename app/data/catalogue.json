@@ -1,0 +1,106 @@
+{ "products" : [
+	{
+		"productCode":"01",
+		"name":"Almond Toe Court Shoes, Patent Black",
+		"category":"Women’s Footwear",
+		"price":99.00,
+		"quantity":5,
+		"url": "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=61954405"
+	},
+  {
+		"productCode":"01",
+		"name":"Suede Shoes, Blue",
+		"category":"Women’s Footwear",
+		"price":42.00,
+		"quantity":4,
+		"url": "http://s3.thisnext.com/media/largest_dimension/1C6FEE8C.jpg"
+	},
+  {
+		"productCode":"01",
+		"name":"Leather Driver Saddle Loafers, Tan",
+		"category":"Men’s Footwear",
+		"price":34.00,
+		"quantity":12,
+		"url": "http://ecx.images-amazon.com/images/I/81utgHIBixL._UY395_.jpg"
+	},
+  {
+		"productCode":"01",
+		"name":"Flip Flops, Red",
+		"category":"Men’s Footwear",
+		"price":19.00,
+		"quantity":6,
+		"url": "http://i.ebayimg.com/images/i/271462346747-0-1/s-l1000.jpg"
+	},
+  {
+		"productCode":"01",
+		"name":"Flip Flops, Blue",
+		"category":"Men’s Footwear",
+		"price":19.00,
+		"quantity":0,
+		"url": "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=3885183"
+	},
+  {
+		"productCode":"02",
+		"name":"Gold Button Cardigan, Black",
+		"category":"Women’s Casualwear",
+		"price":167.00,
+		"quantity":6,
+		"url": "http://g02.a.alicdn.com/kf/HTB1DeOcKFXXXXcqXpXXq6xXFXXXM/VB4N-OL-Work-Wear-Gold-Buttons-Black-Cardigan-And-long-Sections-Women-Feminino-Classic-Jackets-One.jpg"
+	},
+  {
+		"productCode":"02",
+		"name":"Cotton Shorts, Medium Red",
+		"category":"Women’s Casualwear",
+		"price":30.00,
+		"quantity":5,
+		"url": "http://g01.a.alicdn.com/kf/HTB129yDIVXXXXcZaXXXq6xXFXXXn/2015-New-Fashion-Women-Casual-Vintage-Cotton-Sports-Fitness-Gym-Hot-Shorts-Sexy-Slim-Elastic-High.jpg"
+	},
+  {
+		"productCode":"02",
+		"name":"Fine Stripe Short Sleeve Shirt, Grey",
+		"category":"Men’s Casualwear",
+		"price":49.99,
+		"quantity":9,
+		"url": "http://cdn.shopify.com/s/files/1/0786/0197/products/1_b0b51e50-7dd1-4198-b6f0-59295dfe731c_large.jpeg?v=1430069762"
+	},
+  {
+		"productCode":"02",
+		"name":"Fine Stripe Short Sleeve Shirt, Green",
+		"category":"Men’s Casualwear",
+		"price":39.99,
+		"quantity":3,
+		"url": "http://images.linnlive.com/de0cfdb94597782ae63b8e7d117ed23b/15b7eb64-2d6d-4101-9f80-370d7a108040.jpg"
+	},
+  {
+		"productCode":"02",
+		"name":"Sharkskin Waistcoat, Charcoal",
+		"category":"Men’s Formalwear",
+		"price":75.00,
+		"quantity":2,
+		"url": "http://www.racinggreen.co.uk/upload/siteimages/ProductNew/RG120739_250_A.jpg"
+	},
+  {
+		"productCode":"02",
+		"name":"Lightweight Patch Pocket,  Blazer, Deer",
+		"category":"Men’s Formalwear",
+		"price":175.00,
+		"quantity":1,
+		"url": "https://cdna.lystit.com/photos/2012/07/24/reiss-deer-lightweight-patch-pkt-blazer-product-1-4269143-518146599.jpeg"
+	},
+  {
+		"productCode":"02",
+		"name":" Bird Print Dress, Black",
+		"category":"Women’s Formalwear",
+		"price":270.00,
+		"quantity":10,
+		"url": "http://media.oasis-stores.com/pws/client/images/catalogue/products/5691561/zoom/5691561.jpg"
+	},
+  {
+		"productCode":"02",
+		"name":" Mid Twist Cut-Out Dress, Pink",
+		"category":"Women’s Formalwear",
+		"price":540.00,
+		"quantity":5,
+		"url": "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=125587341"
+	}
+]}

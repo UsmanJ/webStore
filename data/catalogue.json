@@ -1,0 +1,93 @@
+{ "products" : [
+	{
+		"productCode":"01",
+		"name":"Almond Toe Court Shoes, Patent Black",
+		"category":"Women’s Footwear",
+		"price":99.00,
+		"quantity":5
+	},
+  {
+		"productCode":"02",
+		"name":"Suede Shoes, Blue",
+		"category":"Women’s Footwear",
+		"price":42.00,
+		"quantity":4
+	},
+  {
+		"productCode":"03",
+		"name":"Leather Driver Saddle Loafers, Tan",
+		"category":"Men’s Footwear",
+		"price":34.00,
+		"quantity":12
+	},
+  {
+		"productCode":"04",
+		"name":"Flip Flops, Red",
+		"category":"Men’s Footwear",
+		"price":19.00,
+		"quantity":6
+	},
+  {
+		"productCode":"04",
+		"name":"Flip Flops, Blue",
+		"category":"Men’s Footwear",
+		"price":19.00,
+		"quantity":0
+	},
+  {
+		"productCode":"05",
+		"name":"Gold Button Cardigan, Black",
+		"category":"Women’s Casualwear",
+		"price":167.00,
+		"quantity":6
+	},
+  {
+		"productCode":"06",
+		"name":"Cotton Shorts, Medium Red",
+		"category":"Women’s Casualwear",
+		"price":30.00,
+		"quantity":5
+	},
+  {
+		"productCode":"07",
+		"name":"Fine Stripe Short Sleeve Shirt, Grey",
+		"category":"Men’s Casualwear",
+		"price":49.99,
+		"quantity":9
+	},
+  {
+		"productCode":"08",
+		"name":"Fine Stripe Short Sleeve Shirt, Green",
+		"category":"Men’s Casualwear",
+		"price":39.99,
+		"quantity":3
+	},
+  {
+		"productCode":"09",
+		"name":"Sharkskin Waistcoat, Charcoal",
+		"category":"Men’s Formalwear",
+		"price":75.00,
+		"quantity":2
+	},
+  {
+		"productCode":"10",
+		"name":"Lightweight Patch Pocket,  Blazer, Deer",
+		"category":"Men’s Formalwear",
+		"price":175.00,
+		"quantity":1
+	},
+  {
+		"productCode":"11",
+		"name":" Bird Print Dress, Black",
+		"category":"Women’s Formalwear",
+		"price":270.00,
+		"quantity":10
+	},
+  {
+		"productCode":"12",
+		"name":" Mid Twist Cut-Out Dress, Pink",
+		"category":"Women’s Formalwear",
+		"price":540.00,
+		"quantity":5
+	}
+]};
