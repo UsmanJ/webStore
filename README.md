@@ -30,7 +30,7 @@ This application was built using JavaScript and the AngularJS framework.
 After cloning the repo, go into the root folder of the project and:
 
 Run `npm install`<br>
-Run `grunt`<br>
+Run `grunt install`<br>
 Run `grunt serve` to view the application
 
 ## Testing
