@@ -20,18 +20,18 @@ describe('Factory: CatalogueService', function () {
   });
 
   it('should load the catalogue json', function() {
-	var catalogueData = { "products" : [
+	var catalogueData = { 'products' : [
   	{
-  		"productCode":"01",
-  		"name":"Almond Toe Court Shoes, Patent Black",
-  		"category":"Women’s Footwear",
-  		"price":99.00,
-  		"quantity":5,
-  		"url": "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=61954405"
+  		'productCode':'01',
+  		'name':'Almond Toe Court Shoes, Patent Black',
+  		'category':'Women’s Footwear',
+  		'price':99.00,
+  		'quantity':5,
+  		'url': 'http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=61954405'
   	}
   ]};
-  
-	$httpBackend.whenGET(/\/data\/catalogue.json?.*/).respond(function(/* method, url */) {
+
+	$httpBackend.whenGET(/\/data\/catalogue.json?.*/).respond(function() {
 	  return [200, catalogueData];
 	});
 	CatalogueService.get().success(function (data) {

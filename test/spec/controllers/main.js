@@ -85,7 +85,7 @@ describe('when adding items to the basket', function () {
   });
 });
 
-describe('when incremeneting product in the basket', function () {
+describe('when incremeneting product quantity in the basket', function () {
 
   beforeEach(module('clothingWebsiteApp'));
 
@@ -114,7 +114,7 @@ describe('when incremeneting product in the basket', function () {
 		'url': 'http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=61954405'
   };
 
-  it('should increment totalMains when a main is added', function () {
+  it('should increment totalProducts when a product is added', function () {
     MainCtrl.add(product);
     MainCtrl.incrementItem(product);
     expect(MainCtrl.totalProducts).toBe(2);
@@ -130,6 +130,13 @@ describe('when incremeneting product in the basket', function () {
     MainCtrl.add(product);
     MainCtrl.add(product);
     expect(MainCtrl.basket[0].quantity).toBe(2);
+  });
+
+  it('should not change the quantity in the object if there is no stock remaining', function () {
+    MainCtrl.add(product);
+    spyOn(window, 'alert');
+    MainCtrl.add(product);
+    expect(window.alert).toHaveBeenCalledWith('Sorry, this product is out of stock.');
   });
 });
 
@@ -162,7 +169,7 @@ describe('when decrementing product in the basket', function () {
 		'url': 'http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=61954405'
   };
 
-  it('should decrement totalMains when a main is decremented', function () {
+  it('should decrement totalProducts when a product is decremented', function () {
     MainCtrl.add(product);
     MainCtrl.incrementItem(product);
     MainCtrl.incrementItem(product);
@@ -176,5 +183,71 @@ describe('when decrementing product in the basket', function () {
     MainCtrl.incrementItem(product);
     MainCtrl.decrementItem(product);
     expect(MainCtrl.totalCost).toBe(198);
+  });
+});
+
+describe('when applying voucher in the basket', function () {
+
+  beforeEach(module('clothingWebsiteApp'));
+
+  var MainCtrl,
+	scope,
+	CatalogueService,
+  DiscountService;
+
+  beforeEach(inject(function ($controller, $rootScope, $injector) {
+    scope = $rootScope.$new();
+	CatalogueService = $injector.get('CatalogueService');
+  DiscountService = $injector.get('DiscountService');
+	var success = function(func) {
+	  return func({resultCount: 1});
+	};
+	spyOn(CatalogueService, 'get').and.returnValue({success: success});
+  spyOn(DiscountService, 'get').and.returnValue({success: success});
+    MainCtrl = $controller('MainCtrl', {
+      $scope: scope
+    });
+  }));
+
+  var product = {
+		'productCode':'01',
+		'name':'Almond Toe Court Shoes, Patent Black',
+		'category':'Women’s Footwear',
+		'price':99.00,
+		'quantity':5,
+		'url': 'http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=61954405'
+  };
+
+  var discount = [
+  	{
+  		'code':'fiver',
+  		'discount': 5,
+  		'value': 5
+  	},
+  	{
+  		'code':'tenner',
+  		'discount': 10,
+  		'value': 50
+  	},
+  	{
+  		'code':'fifteen',
+  		'discount': 15,
+  		'value': 5
+  	}
+  ];
+
+  var fiver = 'fiver';
+
+  it('should decrease the totalCost by 5', function () {
+    MainCtrl.add(product);
+    MainCtrl.submitVoucher("fiver");
+    expect(MainCtrl.totalCost).toBe(94);
+  });
+
+  it('should decrement totalCost by 10', function () {
+    MainCtrl.add(product);
+    MainCtrl.submitVoucher('tenner');
+    console.log(MainCtrl.discount)
+    expect(MainCtrl.totalCost).toBe(88);
   });
 });
